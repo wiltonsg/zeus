@@ -13,9 +13,9 @@ from flask.ext.mongoengine.wtf import model_form
 from flask.ext.wtf import Form
 from wtforms import SubmitField, StringField
 
-{# Get Model #}
+{  # Get Model #}
 from {{NAMEPROJECT}}.{{MODNAME}}.models import {{MODNAME | capitalize}}
 
-class {{MODNAME }}Form(Form):
+class {{MODNAME}}Form(Form):
     nome = StringField("Nome")
     submit = SubmitField("Adicionar")
