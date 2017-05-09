@@ -107,6 +107,7 @@ def configure_nginx():
     with lcd(local_config_dir):
         with cd(remote_nginx_dir):
             put("./project_nginx.conf", "./{{NAMEPROJECT}}", use_sudo=True)
+    sudo("touch /home/www/{{NAMEPROJECT}}/log/uwsgi-{{NAMEPROJECT}}.log")
     sudo("systemctl restart nginx")
 
 
