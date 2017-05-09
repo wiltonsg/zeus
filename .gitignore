@@ -5,7 +5,7 @@
 static/.webassets-cache
 static/gen/
 __pycache__
-testes/
+tests/
 help.txt
 build/
 dist/
