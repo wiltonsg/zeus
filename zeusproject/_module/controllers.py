@@ -10,7 +10,7 @@
 """
 from flask import current_app, render_template, Blueprint, redirect, \
     url_for, flash, current_app, request
-from flask.ext.security import login_required
+from flask_security import login_required
 
 {  # Get Model #}
 from {{NAMEPROJECT}}.{{MODNAME}}.models import {{MODNAME | capitalize}}

@@ -9,8 +9,8 @@
     :license: BSD, see LICENSE for more details.
 """
 
-from flask.ext.mongoengine.wtf import model_form
-from flask.ext.wtf import Form
+from flask_mongoengine.wtf import model_form
+from flask_wtf import Form
 from wtforms import SubmitField, StringField
 
 {  # Get Model #}

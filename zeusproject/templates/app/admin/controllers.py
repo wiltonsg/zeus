@@ -9,7 +9,7 @@
     :license: BSD, see LICENSE for more details.
 """
 from flask import current_app, render_template, Blueprint
-from flask.ext.security import roles_required
+from flask_security import roles_required
 
 blueprint = Blueprint('admin', __name__, url_prefix='/admin')
 

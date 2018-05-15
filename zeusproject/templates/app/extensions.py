@@ -11,7 +11,7 @@
 from flask_mongoengine import MongoEngine
 from flask_mail import Mail
 from flask_assets import Environment
-from flask_cache import Cache
+from flask_caching import Cache
 from flask_bootstrap import Bootstrap
 
 mail = Mail()
