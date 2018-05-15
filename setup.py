@@ -21,13 +21,20 @@ setup(
     zip_safe=False,
     platforms="any",
     install_requires=[
-        "colorama==0.3.7",
-        "colorlog==2.7.0",
-        "Jinja2==2.8",
-        "MarkupSafe==0.23",
+        "attrs==18.1.0",
+        "colorama==0.3.9",
+        "colorlog==3.1.4",
+        "Jinja2==2.10",
+        "MarkupSafe==1.0"<
+        "more-itertools==4.1.0"<
+        "pluggy==0.6.0",
+        "py==1.5.3",
         "pyfiglet==0.7.5",
+        "pytest==3.5.1",
+        "six==1.11.0",
         "termcolor==1.1.0",
-        "pytest==2.9.2"
+        "tox==3.0.0",
+        "virtualenv==15.2.0"
     ],
     scripts=["zeus"],
     classifiers=[
