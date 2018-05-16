@@ -12,9 +12,9 @@ from flask import current_app, render_template, Blueprint, redirect, \
     url_for, flash, current_app, request
 from flask_security import login_required
 
-{  # Get Model #}
+# Get Model
 from {{NAMEPROJECT}}.{{MODNAME}}.models import {{MODNAME | capitalize}}
-{  # Get Form #}
+# Get Form 
 from {{NAMEPROJECT}}.{{MODNAME}}.forms import {{MODNAME}}Form
 
 blueprint = Blueprint('{{MODNAME}}', __name__, url_prefix='/{{MODNAME}}')
