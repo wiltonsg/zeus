@@ -3,8 +3,11 @@
 
 import sys
 
+import zeusproject.comands.functions as commands
 
-from zeusproject import commands
+from zeusproject.comands.project import Project
+from zeusproject.comands.module import Module
+from zeusproject.comands.template import Template
 
 
 def main():
@@ -12,27 +15,27 @@ def main():
     args = commands.get_arguments()
 
     if args.debug:
-        commands.logger.setLevel(commands.logging.DEBUG)
-    commands.logger.debug("Debug ON")
+        commands.getLogger().setLevel(commands.logging.DEBUG)
+    commands.getLogger().debug("Debug ON")
 
     if args.project != "":
-        project = commands.Project(args.project, args.author,
-                                   args.domain)
+        project = Project(args.project, args.author,
+                          args.domain)
         try:
             project.generate()
         except Exception as e:
             print(e)
             sys.exit(1)
     elif args.module is not None and len(args.module) == 2:
-        module = commands.Module(args.module[1].strip(),
-                                 args.author, args.domain)
+        module = Module(args.module[1].strip(),
+                        args.author, args.domain)
         try:
             module.ger_custom(args.module[0].strip())
         except Exception as e:
             print(e)
             sys.exit(1)
     elif args.template is not None and len(args.template) == 2:
-        template = commands.Template(
+        template = Template(
             args.template[1], args.author, args.domain)
         try:
             template.ger_custom(args.template[0].strip())
